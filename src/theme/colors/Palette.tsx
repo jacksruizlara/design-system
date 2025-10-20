@@ -27,8 +27,9 @@ const PaletteComponent = () => {
                             alignItems: "center",
                             margin: 0,
                             padding: 0,
-                            border: 'solid 1px #000000',
+                            border: `solid 1px ${Palette.black.active}`,
                             borderRadius: '1rem',
+                            boxShadow: `0 0.25rem 0.5rem 0 ${Palette.gray.hover}`,
                         }}
                     >
                         <Typography>{category.toUpperCase()}</Typography>
