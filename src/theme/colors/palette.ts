@@ -29,7 +29,7 @@ const Palette: PaletteType = {
   },
   gray: {
     inactive: "#e2e4e9",
-    active: "#e2e4e9",
+    active: "#d2d6de",
     hover: "#b5bbc8",
   },
   navy: {
