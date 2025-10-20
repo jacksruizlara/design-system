@@ -62,6 +62,11 @@ const Palette: PaletteType = {
     active: "#111111",
     hover: "#000000",
   },
+  white: {
+    inactive: "#F5F5F5",
+    active: "#FFFAFA",
+    hover: "#ffffff",
+  },
 };
 
 export default Palette;

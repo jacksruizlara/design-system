@@ -17,4 +17,5 @@ export type PaletteType = {
   orange: PaletteItemType;
   maroon: PaletteItemType;
   black: PaletteItemType;
+  white: PaletteItemType;
 };
