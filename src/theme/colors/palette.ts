@@ -1,72 +1,68 @@
 import type { PaletteType } from "../types/PaletteType";
+import { Black, Cian, Green, LightCian, LightGray, Red, White, Yellow } from "./base";
 
 // Webtool: https://m2.material.io/inline-tools/color/
 const Palette: PaletteType = {
+  default: {
+    inactive: LightGray.inactive,
+    active: LightGray.active,
+    hover: LightGray.hover,
+    text: {
+      inactive: Black.inactive,
+      active: Black.active,
+      hover: Black.hover,
+    },
+  },
   primary: {
-    inactive: "#85b5d4",
-    active: "#3c8dbc",
-    hover: "#347da6",
+    inactive: Cian.inactive,
+    active: Cian.active,
+    hover: Cian.hover,
+    text: {
+      inactive: White.inactive,
+      active: White.active,
+      hover: White.hover
+    }
   },
   info: {
-    inactive: "#7bd6f6",
-    active: "#00c0ef",
-    hover: "#00a8d0",
+    inactive: LightCian.inactive,
+    active: LightCian.active,
+    hover: LightCian.hover,
+    text: {
+      inactive: White.inactive,
+      active: White.active,
+      hover: White.hover
+    }
   },
   success: {
-    inactive: "#76c695",
-    active: "#01a75b",
-    hover: "#038d4d",
+    inactive: Green.inactive,
+    active: Green.active,
+    hover: Green.hover,
+    text: {
+      inactive: White.inactive,
+      active: White.active,
+      hover: White.hover
+    }
   },
   warning: {
-    inactive: "#f8bf75",
-    active: "#f39c13",
-    hover: "#db8b0c",
+    inactive: Yellow.inactive,
+    active: Yellow.active,
+    hover: Yellow.hover,
+    text: {
+      inactive: White.inactive,
+      active: White.active,
+      hover: White.hover
+    }
   },
   danger: {
-    inactive: "#eb8d80",
-    active: "#de4c39",
-    hover: "#d43825",
-  },
-  gray: {
-    inactive: "#e2e4e9",
-    active: "#d2d6de",
-    hover: "#b5bbc8",
-  },
-  navy: {
-    inactive: "#5a6e83",
-    active: "#001f3f",
-    hover: "#001f3f",
-  },
-  teal: {
-    inactive: "#8bdede",
-    active: "#39cccc",
-    hover: "#31bcbb",
-  },
-  purple: {
-    inactive: "#9795c7",
-    active: "#615ca8",
-    hover: "#56529a",
-  },
-  orange: {
-    inactive: "#ffb177",
-    active: "#ff861a",
-    hover: "#ff7701",
-  },
-  maroon: {
-    inactive: "#e97598",
-    active: "#d91a60",
-    hover: "#d1366d",
-  },
-  black: {
-    inactive: "#646464",
-    active: "#111111",
-    hover: "#000000",
-  },
-  white: {
-    inactive: "#F5F5F5",
-    active: "#FFFAFA",
-    hover: "#ffffff",
-  },
+    inactive: Red.inactive,
+    active: Red.active,
+    hover: Red.hover,
+    text: {
+      inactive: White.inactive,
+      active: White.active,
+      hover: White.hover
+    }
+  }
 };
 
 export default Palette;

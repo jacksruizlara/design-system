@@ -1,21 +1,19 @@
-export type PaletteItemType = {
-  inactive: string;
-  active: string;
-  hover: string;
+export type ItemType = {
+  inactive: string,
+  active: string,
+  hover: string
 };
 
+export type PaletteItemType = ItemType & {
+  text?: ItemType;
+};
+
+
 export type PaletteType = {
+  default: PaletteItemType;
   primary: PaletteItemType;
   info: PaletteItemType;
   success: PaletteItemType;
   warning: PaletteItemType;
   danger: PaletteItemType;
-  gray: PaletteItemType;
-  navy: PaletteItemType;
-  teal: PaletteItemType;
-  purple: PaletteItemType;
-  orange: PaletteItemType;
-  maroon: PaletteItemType;
-  black: PaletteItemType;
-  white: PaletteItemType;
 };
