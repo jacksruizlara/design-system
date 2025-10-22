@@ -48,6 +48,12 @@ export const LightGray: ItemType = {
     hover: "#e7e7e7"
 };
 
+export const DarkGray: ItemType = {
+    inactive: "#9aa0ac",
+    active: "#7e8593",
+    hover: "#5f6673",
+};
+
 export const Navy: ItemType = {
     inactive: "#5a6e83",
     active: "#001f3f",

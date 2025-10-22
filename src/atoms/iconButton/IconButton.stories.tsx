@@ -5,7 +5,10 @@ import { Menu } from '@mui/icons-material';
 const meta: Meta<typeof IconButton> = {
   component: IconButton,
   title: "Atoms/IconButton",
-  tags: ["autodocs"]
+  tags: ["autodocs"],
+  argTypes: {
+    children: { control: false },
+  }
 };
 
 export default meta;
@@ -17,50 +20,50 @@ export const Default: Story = {
   },
 };
 
-export const Small: Story = {
-  args: {
-    children: <Menu />,
-    size: "small"
-  },
-};
+// export const Small: Story = {
+//   args: {
+//     children: <Menu />,
+//     size: "small"
+//   },
+// };
 
-export const Medium: Story = {
-  args: {
-    children: <Menu />,
-    size: "medium"
-  },
-};
+// export const Medium: Story = {
+//   args: {
+//     children: <Menu />,
+//     size: "medium"
+//   },
+// };
 
-export const Large: Story = {
-  args: {
-    children: <Menu />,
-    size: "large"
-  },
-};
+// export const Large: Story = {
+//   args: {
+//     children: <Menu />,
+//     size: "large"
+//   },
+// };
 
-export const Disabled: Story = {
-  args: {
-    children: <Menu />,
-    disabled: true
-  },
-};
+// export const Disabled: Story = {
+//   args: {
+//     children: <Menu />,
+//     disabled: true
+//   },
+// };
 
-export const Loading: Story = {
-  args: {
-    children: <Menu />,
-    loading: true
-  },
-};
+// export const Loading: Story = {
+//   args: {
+//     children: <Menu />,
+//     loading: true
+//   },
+// };
 
-export const WithBorder: Story = {
-  args: {
-    children: <Menu />,
-    size: "medium",
-    sx: {
-        border: "1px solid",
-        borderRadius: "5px",
-        borderColor: "primary.main",
-        color: "primary.main"
-    },
-  },
-};
+// export const WithBorder: Story = {
+//   args: {
+//     children: <Menu />,
+//     size: "medium",
+//     sx: {
+//         border: "1px solid",
+//         borderRadius: "5px",
+//         borderColor: "primary.main",
+//         color: "primary.main"
+//     },
+//   },
+// };

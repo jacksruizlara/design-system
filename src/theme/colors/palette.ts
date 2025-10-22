@@ -1,5 +1,5 @@
 import type { PaletteType } from "../types/PaletteType";
-import { Black, Cian, Green, LightCian, LightGray, Red, White, Yellow } from "./base";
+import { Cian, DarkGray, Green, LightCian, LightGray, Red, White, Yellow } from "./base";
 
 // Webtool: https://m2.material.io/inline-tools/color/
 const Palette: PaletteType = {
@@ -8,9 +8,9 @@ const Palette: PaletteType = {
     active: LightGray.active,
     hover: LightGray.hover,
     text: {
-      inactive: Black.inactive,
-      active: Black.active,
-      hover: Black.hover,
+      inactive: DarkGray.inactive,
+      active: DarkGray.active,
+      hover: DarkGray.hover,
     },
   },
   primary: {
