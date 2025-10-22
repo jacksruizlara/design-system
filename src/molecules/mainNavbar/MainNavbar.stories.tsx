@@ -31,12 +31,14 @@ type Story = StoryObj<typeof MainNavbar>;
 export const Primary: Story = {
   args: {
     logo: {
-      text: "LONG CONTENT LOGO",
-      shortText: "SL"
+      text: "LONG LOGO CONTENT",
+      shortText: "LLC"
     },
     avatar: {
       alt: "Jackson Ruiz",
       src: "https://media.licdn.com/dms/image/v2/C5603AQEh3ne8L2GoJQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516812791033?e=1762992000&v=beta&t=-YVPU3POC037N1EBm9pS_6FSLNE3I7bQ5BiSjOO6B_s"
-    }
+    },
+    customExitAction: () => alert("Click on exit button."),
+    customMenuAction: () => alert("Click on menu icon."),
   },
 };
