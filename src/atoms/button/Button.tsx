@@ -27,19 +27,19 @@ const StyledButton = styled(MuiButton)((props: ButtonProps) => {
     };
   }
 
-  if(props.buttonType==="default"){
+  if (props.buttonType === "default") {
     return {
-    borderColor: buttonPalette?.text?.active,
-    color: buttonPalette?.text?.active,
-    '&:hover': {
-      borderColor: buttonPalette?.text?.hover,
-      color: buttonPalette?.text?.hover,
-    },
-    '&:disabled': {
-      borderColor: buttonPalette?.text?.inactive,
-      color: buttonPalette?.text?.inactive,
-    },
-  };
+      borderColor: buttonPalette?.text?.active,
+      color: buttonPalette?.text?.active,
+      '&:hover': {
+        borderColor: buttonPalette?.text?.hover,
+        color: buttonPalette?.text?.hover,
+      },
+      '&:disabled': {
+        borderColor: buttonPalette?.text?.inactive,
+        color: buttonPalette?.text?.inactive,
+      },
+    };
   }
 
   return {
@@ -100,7 +100,13 @@ const Button = ({
         size={loadingIconSize[size].icon}
         sx={{
           paddingX: loadingIconSize[size].padding,
-          color: buttonType === "default" ? Palette.default.text?.inactive : Palette[buttonType as keyof typeof Palette]?.text?.active,
+          color: buttonType === "default"
+            ? Palette.default.text?.inactive
+            : (
+              variant === 'contained' ?
+                Palette[buttonType as keyof typeof Palette]?.text?.active
+                : Palette[buttonType as keyof typeof Palette]?.active
+            ),
         }}
       />) : children}</StyledButton>
   )
