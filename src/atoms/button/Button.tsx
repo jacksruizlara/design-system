@@ -1,7 +1,13 @@
-import { Button as MuiButton, /*type ButtonProps as MuiButtonProps,*/ styled } from "@mui/material"
+import { CircularProgress, Button as MuiButton, /*type ButtonProps as MuiButtonProps,*/ styled } from "@mui/material"
 import Palette from "../../theme/colors/palette";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+
+const loadingIconSize = {
+  small: { icon: '1.4rem', padding: 2.115 },
+  medium: { icon: '1.51rem', padding: 2.25 },
+  large: { icon: '1.65rem', padding: 2.35 }
+};
 
 const StyledButton = styled(MuiButton)((props: ButtonProps) => {
   const buttonPalette = Palette[props.buttonType as keyof typeof Palette];
@@ -62,7 +68,6 @@ export interface ButtonProps {
   showEndIcon?: boolean,
   endIcon?: React.ReactNode,
   loading?: boolean,
-  loadingPosition?: "start" | "end" | "center",
   fullWidth?: boolean,
 }
 
@@ -78,7 +83,6 @@ const Button = ({
   showEndIcon = false,
   endIcon = (<ChevronLeftIcon />),
   loading = false,
-  loadingPosition = "center",
   fullWidth = false
 }: ButtonProps) => {
   return (
@@ -90,10 +94,15 @@ const Button = ({
       disabled={disabled}
       startIcon={showStartIcon && startIcon}
       endIcon={showEndIcon && endIcon}
-      loading={loading}
-      loadingPosition={loadingPosition}
       fullWidth={fullWidth}
-    >{children}</StyledButton>
+    >{loading ? (
+      <CircularProgress
+        size={loadingIconSize[size].icon}
+        sx={{
+          paddingX: loadingIconSize[size].padding,
+          color: buttonType === "default" ? Palette.default.text?.inactive : Palette[buttonType as keyof typeof Palette]?.text?.active,
+        }}
+      />) : children}</StyledButton>
   )
 }
 

@@ -8,11 +8,11 @@ const roundStyle = {
 };
 
 const loadingIconSize = {
-    small: '1.5rem',
-    medium: '1.51rem',
-    large: '1.5125rem'
-  };
-  
+  small: '1.5rem',
+  medium: '1.51rem',
+  large: '1.5125rem'
+};
+
 export interface IconButtonProps {
   children: React.ReactNode,
   onClick: () => void,
